@@ -1,5 +1,7 @@
 ?-
 
+% Initialize global variables
+
 G_Male := 0,
 G_Female := 1,
 
@@ -23,6 +25,10 @@ G_Buddies := 0,
 G_X := 700,
 G_Y := 700,
 G_F := 70,
+
+
+
+% Initial Setup
 
 array(x, G_Students, 100),
 array(y, G_Students, 100),
@@ -80,12 +86,16 @@ color(I, Color):-
 	(I =:= 0 -> 
 		Color := G_Green_Color).
 
+
+
+% Move students (dots) across the board
+
 time_func(end) :-
 	update_window(_),
 	G_Days_Passed := G_Days_Passed + 1,
 	(G_Days_Passed =:= G_Days_In_Four_Years -> 
 		kill_timer(_, G_Timer),
-		set_text("Congratulations! You graduated successfully. | Girlfriends: " + G_Girlfriends + " | Buddies: " + G_Buddies, _)
+		set_text("Congratulations! You graduated successfully | Girlfriends: " + G_Girlfriends + " | Buddies: " + G_Buddies, _)
 	else
 		set_text("Days: " + G_Days_Passed + " | Girlfriends: " + G_Girlfriends + " | Buddies: " + G_Buddies, _),
 		for(I, 0, G_Students - 1),
@@ -94,6 +104,11 @@ time_func(end) :-
 		correct(I),
 		I =:= 0,
 		meet(I)).
+
+
+
+% If the player (green dot) meets (share the same coordinations) a girl, she is counted as his girlfriend.
+% If he meets (share the same coordinates) a boy, he is counted as his buddy. 
 
 meet(I):-
 	for(J, 1, G_Students-1),
@@ -106,6 +121,13 @@ meet(I):-
 	gender(J) =:= G_Male ->
 		G_Buddies := G_Buddies + 1),
 	fail.
+
+
+
+% Bump into borders: 1/3 students who bump into the borders is a drop-out. 
+% He/She is no longer a student, but can return later on. 
+% The purpose of this is to simulate real life more accurately...
+% The player (green dot) cannot drop out. He must graduate :)
 
 correct(I):-
 	(x(I) < G_F -> 
@@ -133,3 +155,4 @@ correct(I):-
 		(I =\= 0, random(G_Drop_Out_Rate) =\= 0 -> fail),
 		y(I) := y(I) - ys(I), 
 		ys(I) := -1 * ys(I)).
+

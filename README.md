@@ -16,7 +16,7 @@ Find more about Strawberry Prolog [here](http://www.dobrev.com/index.html)
 
 ### Clone
 
-Clone this repo to your local machine using `https://github.com/Ivaylo-Georgiev/FMI-Love-Life.git`  
+Clone this repo to your local machine using `https://github.com/Ivaylo-Georgiev/University-Love-Life.git`  
 
 ### Setup
 

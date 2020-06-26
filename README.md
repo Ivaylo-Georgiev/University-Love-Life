@@ -4,7 +4,9 @@
 
 ## Strawberry Prolog Overview
 
-This project is written in Strawberry Prolog. It is being developed in the Institute of Mathematics and Informatics – Bulgarian Academy of Sciences and in the Faculty of Mathematics and Informatics – University of Sofia.
+This project is written in _Strawberry Prolog_.  
+
+Strawberry Prolog is being developed in the Institute of Mathematics and Informatics – Bulgarian Academy of Sciences and in the Faculty of Mathematics and Informatics – University of Sofia.
 
 Prolog is a language of a higher level. This turns out to be an advantage and disadvantage at the same time. On one hand it shortens the time of your program development and on the other it may sometimes affect the efficiency. Prolog programs usually work slower than the programs written on language like C but the problem is not in the language but in the Prolog compilers.  
 

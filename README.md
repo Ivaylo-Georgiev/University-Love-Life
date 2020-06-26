@@ -1,4 +1,4 @@
-# 🍓 FMI Love Life
+# 🍓 University Love Life
 
 <img alt="Simulation" src="https://github.com/Ivaylo-Georgiev/FMI-Love-Life/blob/master/simulation.gif" width="500">
 
@@ -22,13 +22,13 @@ Clone this repo to your local machine using `https://github.com/Ivaylo-Georgiev/
 
  1. Download and install [Strawberry Prolog](http://www.dobrev.com/download.html)
  2. Run Strawberry Prolog as an Administrator  
- 3. Run `FMILoveLife.pro`
+ 3. Run `UniversityLoveLife.pro`
  
 ## Features
  
 ### Virtual Simulation
  
-_FMI Love Life_ is a virtual simulation of the students who are currently enrolled in different bachelor programs.  
+_University Love Life_ is a virtual simulation of the students who are currently enrolled in different bachelor programs.  
  
 The boys are represented as blue dots, the girls as pink dots and the player (a male) as a big green dot. The university is represented as a black rectangular outline in the middle of the window. Some of the dots are moving and the others are static. The moving dots have different speeds. The movement (and the lack of movement, respectively), represents the academic activities of the students - as in real life, some people are more dynamic and others, more static. The dots inside the outline of the university are enrolled students and those outside are drop-outs. During the timelapse (4 years), some of the real-life students may deside to drop out, or some of the drop-outs may decide to re-enroll. This possibility is taken into account for the simulation.
 
